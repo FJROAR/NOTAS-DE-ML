@@ -57,7 +57,11 @@ basket_sets.head()
 
 frequent_itemsets = apriori(basket_sets, min_support=0.07, use_colnames=True)
 
-#Se entrenan y se observa la salida
+###############################################################################
+#                                                                             #
+#                              Modelo MBA                                     #
+#                                                                             #
+###############################################################################
 
 rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1)
 rules.head()
